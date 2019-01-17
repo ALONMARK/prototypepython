@@ -149,9 +149,9 @@ print(x3)       # np.full will make 0 × N = N.
 # Both functions takes three arguments, where the first two arguments are the start and end values.
 # The third argument of np.arange is the increment, while for np.linspace it is the total number of points in the array.
 #%%
-import numpy as np
-x1 = np.arange(0.0,10,2)
-x2 = np.linspace(0,11,10)
+import numpy    # no "as np"  np is to simplify the code 
+x1 = numpy.arange(0.0,10,2)
+x2 = numpy.linspace(0,11,10)
 print(x1,"\n",x2)
 
 # np.arange(start number, end number, the step value)

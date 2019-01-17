@@ -4,7 +4,7 @@ data=np.array([[1,2+2j],[3+2j,4+3j],[5+4j,6]],dtype=np.complex64)
 sqrt_data=np.sqrt(data)
 print(data)
 print(sqrt_data)
-print(type(data),ndim(data))
+
 
 #### 02 Introduction ####
 ### 01 Numpy Array ###
@@ -151,8 +151,11 @@ print(x3)       # np.full will make 0 × N = N.
 #%%
 import numpy    # no "as np"  np is to simplify the code 
 x1 = numpy.arange(0.0,10,2)
-x2 = numpy.linspace(0,11,10)
-print(x1,"\n",x2)
+x2 = numpy.linspace(0,11,6)
+#print(x2)
+x2 
+
+#print(x1,"\n",x2)
 
 # np.arange(start number, end number, the step value)
 # np.linspace(start number, end number, the step number)
@@ -161,6 +164,16 @@ print(x1,"\n",x2)
 #     Multidimensional coordinate grids can be generated using the function np.meshgrid.
 # Given two onedimensional coordinate arrays (that is, arrays containing a set of coordinates along a given dimension),
 # we can generate two-dimensional coordinate arrays using the np.meshgrid function. An illustration of this is given in the following example:
+# 
+#%%
+import numpy as np
+x = np.array([ 1, 2, 3, 4])
+y = np.array([-4,-5,-6,-7])
+print("x=",x)
+print("y=",y)
+X,Y=np.meshgrid(x,y)
+print("X =\n",X,"\nY =\n",Y)
+print("X * Y =\n",X*Y)
 #%%
 import numpy as np
 x = np.array([ 1, 2, 3])
@@ -253,6 +266,7 @@ import numpy as np
 print('\n Vector in NumPy:')
 υ = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
 print(υ)
+#%%
 print("υ.dtype:", υ.dtype)
 print("υ.ndim:",  υ.ndim)
 print("υ.shape:", υ.shape)
